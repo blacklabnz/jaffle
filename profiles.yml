@@ -1,0 +1,32 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    # dev:
+    #   type: synapse
+    #   driver: 'ODBC Driver 17 for SQL Server'
+    #   server: blk-syn-wks.sql.azuresynapse.net
+    #   port: 1433
+    #   database: testpool
+    #   schema: jaffle
+    #   user: 
+    #   password: 
+    #   client_session_keep_alive: False
+    #   query_tag: |
+    #     dbt
+    #     nxu 
+
+    #   # optional
+    #   connect_retries: 0 # default 0
+    #   connect_timeout: 10 # default: 10
+    #   retry_on_database_errors: False # default: false 
+    #   retry_all: False  # default: false
+    dev:
+      type: databricks
+      schema: jaffle
+      host: adb-5039166043338122.2.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/7beb482056044247
+      token: dapicd036f51e3b46eb61993086f9f012af6
+      thread: 1
+      query_tag: |
+        dbt
+        nxu
