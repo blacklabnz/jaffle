@@ -25,6 +25,8 @@ models:
 
       - name: number_of_orders
         description: Count of the number of orders a customer has placed
+        # tests:
+        # - not_null
 
       - name: total_order_amount
         description: Total value (AUD) of a customer's orders
@@ -60,6 +62,7 @@ models:
         description: Total amount (AUD) of the order
         tests:
           - not_null
+          - max_amount_value
 
       - name: credit_card_amount
         description: Amount of the order (AUD) paid for by credit card
