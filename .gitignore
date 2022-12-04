@@ -4,6 +4,6 @@ dbt_modules/
 logs/
 **/.DS_Store
 dbtvenv/
-profiles.yml
+# profiles.yml
 .user.yml
 
